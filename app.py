@@ -18,7 +18,7 @@ def predict():
         params = [[float(IW), float(IF), float(VW), float(FP)]]
         prediction = np.round(tree_model.predict(params), 2)
         depth, width = prediction[0]
-    return render_template("index.html", depth=depth, width=width)
+    return render_template("index.html", depth=depth, width=width )
 
 
 app.run()

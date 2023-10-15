@@ -24,22 +24,22 @@
         <h1 align="center">Предсказания глубины и ширины сварного соединения</h1>
         <form action="" method="POST">
             <p>
-                <label for='IW'>Величина сварочного тока, А</label>
+                <label for='IW'>Величина сварочного тока</label>
                 <br>
                 <input type="number" step="0.0001" name='IW' required>
             </p>
             <p>
-                <label for='IF'>Ток фокусировки электронного пучка, А</label>
+                <label for='IF'>Ток фокусировки электронного пучка</label>
                 <br>
                 <input type="number" name=IF step="0.0001" required>
             </p>
             <p>
-                <label for='VW'>Скорость сварки, мм/с</label>
+                <label for='VW'>Скорость сварки</label>
                 <br>
                 <input type="number" name='VW' step="0.0001" required>
             </p>
             <p>
-                <label for='FP'>Расстояние от поверхности образцов до электронно-оптической системы, мм</label>
+                <label for='FP'>Расстояние от поверхности образцов до электронно-оптической системы</label>
                 <br>
                 <input type="number" name='FP' step="0.0001" required>
             </p>
@@ -50,14 +50,14 @@
         </form>
 
         <div class="result" align="center">
-        {% if depth and width %}
+        {% if depth %}
             <br>
             <p style="font-size: 20px">
-             Глубина сварного соединения, мм:
+             Глубина сварного соединения:
             </p>
             <p style="font-size: 20px"> {{depth}} </p>
             <p style="font-size: 20px">
-             Ширина сварного соединения, мм:
+             Ширина сварного соединения:
             </p>
             <p style="font-size: 20px"> {{width}} </p>
 

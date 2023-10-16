@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
 import numpy as np
 from sklearn.tree import DecisionTreeRegressor
-import pickle
+# import pickle
+from joblib import load
 
 app = Flask(__name__)
-tree_model = pickle.load(open('tree_model.pkl', 'rb'))
-
+# tree_model = pickle.load(open('tree_model.pkl', 'rb'))
+tree_model = load('tree_model.joblib')
 
 @app.route(rule='/', methods=["GET", "POST"])
 def predict():
